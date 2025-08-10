@@ -17,8 +17,8 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -37,6 +37,17 @@ All colors MUST be HSL.
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+    
+    /* Custom gradient background */
+    --gradient-main: linear-gradient(to right, #004c5c, #000000);
+    
+    /* Google button colors */
+    --google-bg: 0 0% 98%;
+    --google-border: 0 0% 85%;
+    
+    /* Apple button colors */
+    --apple-bg: 0 0% 0%;
+    --apple-fg: 0 0% 100%;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +111,7 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    background: var(--gradient-main);
+    @apply text-foreground min-h-screen;
   }
 }
