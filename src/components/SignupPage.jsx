@@ -15,7 +15,7 @@ const SignupPage = () => {
     acceptTerms: false
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -23,14 +23,14 @@ const SignupPage = () => {
     }));
   };
 
-  const handleCheckboxChange = (checked: boolean) => {
+  const handleCheckboxChange = (checked) => {
     setFormData(prev => ({
       ...prev,
       acceptTerms: checked
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
   };
